@@ -1,6 +1,6 @@
 ﻿<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:data="clr-namespace:RSL.Models;assembly=AvaloniaMVVM1"
-             xmlns:viewModels="clr-namespace:RSL.ViewModels;assembly=AvaloniaMVVM1">
+             xmlns:data="clr-namespace:RSL.Models;assembly=AvaloniaCoreMVVM1"
+             xmlns:viewModels="clr-namespace:RSL.ViewModels;assembly=AvaloniaCoreMVVM1">
 
   <UserControl.DataTemplates>
     <DataTemplate DataType = "data:Student"> 

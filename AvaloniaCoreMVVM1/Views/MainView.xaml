@@ -1,5 +1,5 @@
 ﻿<Window xmlns="https://github.com/avaloniaui" MinWidth="500" MinHeight="300"
-        xmlns:views="clr-namespace:RSL.Views;assembly=AvaloniaMVVM1">
+        xmlns:views="clr-namespace:RSL.Views;assembly=AvaloniaCoreMVVM1">
   <Grid>
     <views:StudentView Name = "studentViewControl"/>
   </Grid>

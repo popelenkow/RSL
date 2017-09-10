@@ -7,7 +7,7 @@ using Avalonia.Themes.Default;
 using Avalonia.Markup.Xaml;
 using Serilog;
 
-namespace AvaloniaMVVM2
+namespace RSAvaloniaCore
 {
     class App : Application
     {
