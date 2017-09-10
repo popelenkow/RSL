@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF6B6545-5A70-4E3F-9E10-6365A012F670}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RSL</RootNamespace>
+    <AssemblyName>RSApple</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Core.1.0.0\lib\net45\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=75e952ba404cdbb0, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Wpf.1.0.0\lib\net45\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="RSAlgorithmLibrary">
+      <HintPath>..\RSAlgorithmLibrary\bin\Debug\RSAlgorithmLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Analysis\AnalyzerAreaConvexHull.cs" />
+    <Compile Include="Analysis\AnalyzerCountCollision.cs" />
+    <Compile Include="Analysis\AnalyzerDevationCenterY.cs" />
+    <Compile Include="Analysis\AnalyzerMinDistance.cs" />
+    <Compile Include="Controls\RSBoxControl.xaml.cs">
+      <DependentUpon>RSBoxControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RSNumericBox.xaml.cs">
+      <DependentUpon>RSNumericBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RSStackControl.xaml.cs">
+      <DependentUpon>RSStackControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RSStackItem.xaml.cs">
+      <DependentUpon>RSStackItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RSStackPanel.xaml.cs">
+      <DependentUpon>RSStackPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Analysis\AnalysisControl.xaml.cs">
+      <DependentUpon>AnalysisControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\AnalysisControl.xaml.cs">
+      <DependentUpon>AnalysisControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\AnalyzerAreaConvexHullControl.xaml.cs">
+      <DependentUpon>AnalyzerAreaConvexHullControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\AnalyzerCountCollisionControl.xaml.cs">
+      <DependentUpon>AnalyzerCountCollisionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\AnalyzerDevationCenterXControl.xaml.cs">
+      <DependentUpon>AnalyzerDevationCenterXControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\AnalyzerDevationCenterYControl.xaml.cs">
+      <DependentUpon>AnalyzerDevationCenterYControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\AnalyzerDistanceGoalControl.xaml.cs">
+      <DependentUpon>AnalyzerDistanceGoalControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\AnalyzerManagerControl.xaml.cs">
+      <DependentUpon>AnalyzerManagerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\AnalyzerMinDistanceControl.xaml.cs">
+      <DependentUpon>AnalyzerMinDistanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\AnalyzerReflectionControl.xaml.cs">
+      <DependentUpon>AnalyzerReflectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\AnalyzerStackControl.xaml.cs">
+      <DependentUpon>AnalyzerStackControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Analysis\IAnalyzerControl.cs" />
+    <Compile Include="Graphics\Generation\Analysis\AnalyzerReflection.cs" />
+    <Compile Include="Graphics\Generation\GenerationControl.xaml.cs">
+      <DependentUpon>GenerationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\FunctionalVector\FunctionalVector2ArithmeticMeanControl.xaml.cs">
+      <DependentUpon>FunctionalVector2ArithmeticMeanControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\FunctionalVector\FunctionalVector2LinearNormControl.xaml.cs">
+      <DependentUpon>FunctionalVector2LinearNormControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\FunctionalVector\FunctionalVector2Reflection.cs" />
+    <Compile Include="Graphics\Generation\Maths\FunctionalVector\FunctionalVector2ReflectionControl.xaml.cs">
+      <DependentUpon>FunctionalVector2ReflectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\FunctionalVector\IFunctionalVector2Control.cs" />
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\IReshuffleControl.cs" />
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleDefaultControl.xaml.cs">
+      <DependentUpon>ReshuffleDefaultControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleInversionControl.xaml.cs">
+      <DependentUpon>ReshuffleInversionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleManagerControl.xaml.cs">
+      <DependentUpon>ReshuffleManagerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleReflection.cs" />
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleReflectionControl.xaml.cs">
+      <DependentUpon>ReshuffleReflectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleShiftControl.xaml.cs">
+      <DependentUpon>ReshuffleShiftControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleStackControl.xaml.cs">
+      <DependentUpon>ReshuffleStackControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\SequencePoints2Control.xaml.cs">
+      <DependentUpon>SequencePoints2Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Set\ISetPoints2Control.cs" />
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2BoxControl.xaml.cs">
+      <DependentUpon>SetPoints2BoxControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2CircleControl.xaml.cs">
+      <DependentUpon>SetPoints2CircleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2DefaultControl.xaml.cs">
+      <DependentUpon>SetPoints2DefaultControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2LineControl.xaml.cs">
+      <DependentUpon>SetPoints2LineControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2Reflection.cs" />
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2ReflectionControl.xaml.cs">
+      <DependentUpon>SetPoints2ReflectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2TwoLinesControl.xaml.cs">
+      <DependentUpon>SetPoints2TwoLinesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2DefaultControl.xaml.cs">
+      <DependentUpon>CognitiveAcceleration2DefaultControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2ManagerControl.xaml.cs">
+      <DependentUpon>CognitiveAcceleration2ManagerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2PurposeMaximizationFunctionControl.xaml.cs">
+      <DependentUpon>CognitiveAcceleration2PurposeMaximizationFunctionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2PurposeSillyControl.xaml.cs">
+      <DependentUpon>CognitiveAcceleration2PurposeSillyControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2Reflection.cs" />
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2ReflectionControl.xaml.cs">
+      <DependentUpon>CognitiveAcceleration2ReflectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2RepulsionConstControl.xaml.cs">
+      <DependentUpon>CognitiveAcceleration2RepulsionConstControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2RepulsionSimpleControl.xaml.cs">
+      <DependentUpon>CognitiveAcceleration2RepulsionSimpleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2StackControl.xaml.cs">
+      <DependentUpon>CognitiveAcceleration2StackControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\ICognitiveAcceleration2Control.cs" />
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\MaximizationFunction\IMaximizationFunction2Control.cs" />
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFunction2DefaultControl.xaml.cs">
+      <DependentUpon>MaximizationFunction2DefaultControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFunction2Reflection.cs" />
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFunction2ReflectionControl.xaml.cs">
+      <DependentUpon>MaximizationFunction2ReflectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFunction2SameControl.xaml.cs">
+      <DependentUpon>MaximizationFunction2SameControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFuntion2CosineRuleControl.xaml.cs">
+      <DependentUpon>MaximizationFuntion2CosineRuleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\CognitiveTimerControl.xaml.cs">
+      <DependentUpon>CognitiveTimerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\LogicalCharacteristics\GoalPosition2Control.xaml.cs">
+      <DependentUpon>GoalPosition2Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\MechanicalAcceleration\IMechanicalAcceleration2Control.cs" />
+    <Compile Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2CarSimpleControl.xaml.cs">
+      <DependentUpon>MechanicalAcceleration2CarSimpleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2DefaultControl.xaml.cs">
+      <DependentUpon>MechanicalAcceleration2DefaultControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2ManagerControl.xaml.cs">
+      <DependentUpon>MechanicalAcceleration2ManagerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2Reflection.cs" />
+    <Compile Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2ReflectionControl.xaml.cs">
+      <DependentUpon>MechanicalAcceleration2ReflectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2StackControl.xaml.cs">
+      <DependentUpon>MechanicalAcceleration2StackControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2UnlimitedControl.xaml.cs">
+      <DependentUpon>MechanicalAcceleration2UnlimitedControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\MechanicalTimerControl.xaml.cs">
+      <DependentUpon>MechanicalTimerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\NumberRobotsControl.xaml.cs">
+      <DependentUpon>NumberRobotsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\PhysicalCharacteristics\CurrentPosition2Control.xaml.cs">
+      <DependentUpon>CurrentPosition2Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\PhysicalCharacteristics\RobotPropotionsControl.xaml.cs">
+      <DependentUpon>RobotPropotionsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\Robotics\RoboticsControl.xaml.cs">
+      <DependentUpon>RoboticsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\UIReflector.cs" />
+    <Compile Include="Graphics\Generation\World\Map\WorldMapManagerControl.xaml.cs">
+      <DependentUpon>WorldMapManagerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\World\Time\IWorldTimeControl.cs" />
+    <Compile Include="Graphics\Generation\World\Time\WorldTimeManagerControl.xaml.cs">
+      <DependentUpon>WorldTimeManagerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\World\Time\WorldTimeReflection.cs" />
+    <Compile Include="Graphics\Generation\World\Time\WorldTimeReflectionControl.xaml.cs">
+      <DependentUpon>WorldTimeReflectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\World\Time\WorldTimeSimulationControl.xaml.cs">
+      <DependentUpon>WorldTimeSimulationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Generation\World\WorldControl.xaml.cs">
+      <DependentUpon>WorldControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Service\MenuControl.xaml.cs">
+      <DependentUpon>MenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\AnalyzerDevationCenterX.cs" />
+    <Compile Include="Analysis\AnalyzerDistanceGoal.cs" />
+    <Compile Include="Graphics\Simulation\BaseTick.cs" />
+    <Compile Include="Graphics\Simulation\GraphControl.xaml.cs">
+      <DependentUpon>GraphControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\IAnalyzer.cs" />
+    <Compile Include="Graphics\Simulation\GridControl.xaml.cs">
+      <DependentUpon>GridControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Simulation\PictureControl.xaml.cs">
+      <DependentUpon>PictureControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Simulation\RobotControl.xaml.cs">
+      <DependentUpon>RobotControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Simulation\SimulationControl.xaml.cs">
+      <DependentUpon>SimulationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Themes\LeftMarginMultiplierConverter.cs" />
+    <Compile Include="Graphics\Themes\TreeViewItemExtensions.cs" />
+    <Compile Include="Graphics\Validators\ValidationNumber.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Service\WorkControl.xaml.cs">
+      <DependentUpon>WorkControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\Simulation\SimulatorViewModel.cs" />
+    <Page Include="Controls\RSBoxControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RSNumericBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RSStackControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RSStackItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RSStackPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Analysis\AnalysisControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Analysis\AnalysisControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Analysis\AnalyzerAreaConvexHullControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Analysis\AnalyzerCountCollisionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Analysis\AnalyzerDevationCenterXControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Analysis\AnalyzerDevationCenterYControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Analysis\AnalyzerDistanceGoalControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Analysis\AnalyzerManagerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Analysis\AnalyzerMinDistanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Analysis\AnalyzerReflectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Analysis\AnalyzerStackControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\GenerationControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\GenerationStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\FunctionalVector\FunctionalVector2ArithmeticMeanControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\FunctionalVector\FunctionalVector2LinearNormControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\FunctionalVector\FunctionalVector2ReflectionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleDefaultControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleInversionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleManagerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleReflectionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleShiftControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Reshuffle\ReshuffleStackControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\SequencePoints2Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2BoxControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2CircleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2DefaultControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2LineControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2ReflectionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Maths\SequencePoints\Set\SetPoints2TwoLinesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2DefaultControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2ManagerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2PurposeMaximizationFunctionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2PurposeSillyControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2ReflectionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2RepulsionConstControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2RepulsionSimpleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\CognitiveAcceleration2StackControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFunction2DefaultControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFunction2ReflectionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFunction2SameControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFuntion2CosineRuleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\CognitiveTimerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\LogicalCharacteristics\GoalPosition2Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2CarSimpleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2DefaultControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2ManagerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2ReflectionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2StackControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\MechanicalAcceleration\MechanicalAcceleration2UnlimitedControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\MechanicalTimerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\NumberRobotsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\PhysicalCharacteristics\CurrentPosition2Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\PhysicalCharacteristics\RobotPropotionsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\Robotics\RoboticsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\World\Map\WorldMapManagerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\World\Time\WorldTimeManagerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\World\Time\WorldTimeReflectionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\World\Time\WorldTimeSimulationControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Generation\World\WorldControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Localization\en-US\Generation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Localization\en-US\Language.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Localization\en-US\Math.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Localization\ru-RU\Generation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Localization\ru-RU\Language.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Localization\ru-RU\Math.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Service\MenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Simulation\GraphControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Simulation\GridControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Simulation\PictureControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Simulation\RobotControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Simulation\SimulationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Styles\MainStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Graphics\Themes\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphics\Service\WorkControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:RSL.Graphics.Localization.ru_RU"
+                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- Math -->
+    <sys:String x:Key="Math.Dimension">Размерность</sys:String>
+    <sys:String x:Key="Math.Height">Высота</sys:String>
+    <sys:String x:Key="Math.Width">Ширина</sys:String>
+    <sys:String x:Key="Math.Radius">Радиус</sys:String>
+    <sys:String x:Key="Math.Point">Точка</sys:String>
+    <sys:String x:Key="Math.Position">Позиция</sys:String>
+    <sys:String x:Key="Math.Direction">Направление</sys:String>
+    <sys:String x:Key="Math.Number">Количество</sys:String>
+    <sys:String x:Key="Math.Proportions">Размеры</sys:String>
+    <sys:String x:Key="Math.Time">Время</sys:String>
+    <sys:String x:Key="Math.Angle">Угол</sys:String>
+    <sys:String x:Key="Math.Speed">Скорость</sys:String>
+    <sys:String x:Key="Math.Sampling">Дискретизация</sys:String>
+    <sys:String x:Key="Math.Reshuffle">Перетасовка</sys:String>
+    <sys:String x:Key="Math.Velocity">Векторная скорость</sys:String>
+    <sys:String x:Key="Math.Course">Курс</sys:String>
+    <sys:String x:Key="Math.Acceleration">Ускорение</sys:String>
+</ResourceDictionary>

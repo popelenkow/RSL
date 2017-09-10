@@ -1,0 +1,31 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:data="clr-namespace:RSL.Models;assembly=AvaloniaMVVM1"
+             xmlns:viewModels="clr-namespace:RSL.ViewModels;assembly=AvaloniaMVVM1">
+
+  <UserControl.DataTemplates>
+    <DataTemplate DataType = "data:Student"> 
+         <StackPanel Orientation = "Horizontal"> 
+            <TextBox Text = "{Binding FirstName, Mode=TwoWay}" 
+               Width = "100" Margin = "3 5 3 5"/>           
+            <TextBox Text = "{Binding LastName, Mode=TwoWay}" 
+               Width = "100" Margin = "0 5 3 5"/>					
+            <TextBlock Text = "{Binding FullName, Mode=OneWay}" 
+               Margin = "0 5 3 5"/> 
+         </StackPanel> 
+      </DataTemplate> 
+  </UserControl.DataTemplates>
+  
+  <Grid>
+    <StackPanel Orientation = "Horizontal">
+      <ListBox Items = "{Binding Students}" SelectedItem = "{Binding SelectedStudent}"/> 
+      
+       <Button Content = "Delete" 
+            Command = "{Binding DeleteCommand}"
+            HorizontalAlignment = "Left" 
+            VerticalAlignment = "Top" 
+            Width = "75" /> 
+      
+
+    </StackPanel>
+  </Grid>
+</UserControl>

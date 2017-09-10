@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:RSL.Graphics.Localization.ru_RU"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Generation.Generator">Генератор</sys:String>
+    <sys:String x:Key="Generation.Generate">Сгенерировать</sys:String>
+    <!-- World -->
+    <sys:String x:Key="Generation.World">Мир</sys:String>
+    <sys:String x:Key="Generation.WorldMap">Мировая карта</sys:String>
+    <sys:String x:Key="Generation.WorldTime">Мировое время</sys:String>
+    <!-- Robotics -->
+
+    <sys:String x:Key="Generation.Robotics">Робототехника</sys:String>
+    <sys:String x:Key="Generation.NumberRobots">Количество роботов</sys:String>
+    <sys:String x:Key="Generation.CurrentPosition">Текущая позиция</sys:String>
+    <sys:String x:Key="Generation.GoalPosition">Целевая позиция</sys:String>
+    <sys:String x:Key="Generation.Proportions">Размеры</sys:String>
+    <sys:String x:Key="Generation.CognitiveAcceleration">Когнитивное ускорение</sys:String>
+    <sys:String x:Key="Generation.MechanicalAcceleration">Механическое ускорение</sys:String>
+    <sys:String x:Key="Generation.CognitiveTimer">Когнитивный таймер</sys:String>
+    <sys:String x:Key="Generation.MechanicalTimer">Механический таймер</sys:String>
+
+
+
+</ResourceDictionary>

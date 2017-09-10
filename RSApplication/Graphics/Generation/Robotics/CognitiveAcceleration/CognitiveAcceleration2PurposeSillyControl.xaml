@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="RSL.Graphics.Generation.Robotics.CognitiveAcceleration.CognitiveAcceleration2PurposeSillyControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+           xmlns:controls="clr-namespace:RSL.Controls"
+             xmlns:local="clr-namespace:RSL.Graphics.Generation.Robotics.CognitiveAcceleration"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock Grid.Row="0" Grid.Column="0">
+            <Run Text="{DynamicResource Math.Time}"/>
+        </TextBlock>
+        <controls:RSNumericBox  Grid.Row="0" Grid.Column="1" x:Name="TimeControl"/>
+
+
+        <TextBlock Grid.Row="1" Grid.Column="0">
+            <Run Text="MaxVisibleRange"/>
+        </TextBlock>
+        <controls:RSNumericBox  Grid.Row="1" Grid.Column="1" x:Name="MaxVisibleRangeControl"/>
+        
+        
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:RSL.Graphics.Localization"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Generation.xaml"/>
+        <ResourceDictionary Source="Math.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!-- Main window -->
+    <sys:String x:Key="TitleWindow">RSL</sys:String>
+    <sys:String x:Key="TitleMainPage">Главная страница</sys:String>
+    <sys:String x:Key="TitleWorkPage">Рабочая страница</sys:String>
+    <sys:String x:Key="MenuLanguage">Язык</sys:String>
+
+    <!-- Work Page -->
+    <sys:String x:Key="Save">Сохранить</sys:String>
+    <sys:String x:Key="Open">Открыть</sys:String>
+
+    <sys:String x:Key="TitleSimulationPage">Симуляция</sys:String>
+    <sys:String x:Key="TitleAnalysisPage">Анализ</sys:String>
+    
+
+    <!-- ValidationNumberic -->
+    <sys:String x:Key="ExeptionNumbericMinus">Не число. Некорректная позиция минуса.</sys:String>
+    <sys:String x:Key="ExeptionNumbericSigned">Число только беззнаковое.</sys:String>
+    <sys:String x:Key="ExeptionNumbericPoints">Не число. Избыток точек.</sys:String>
+    <sys:String x:Key="ExeptionNumbericPointed">Число только целое.</sys:String>
+    
+</ResourceDictionary>

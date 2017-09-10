@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="RSL.Controls.RSBoxControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RSL.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Border HorizontalAlignment="Left" BorderBrush="Gray" BorderThickness="2">
+        <StackPanel MinWidth="150">
+            <Border BorderBrush="DarkGray" BorderThickness="2" Name="HeaderControl"/>
+            <Border HorizontalAlignment="Stretch" BorderBrush="DarkGray" BorderThickness="2" x:Name="ContentValueControl"/>
+        </StackPanel>
+    </Border>
+
+</UserControl>

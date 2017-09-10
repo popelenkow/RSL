@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:RSL.Graphics.Localization"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    
+    <sys:String x:Key="Generation.Generator">Generator</sys:String>
+    <sys:String x:Key="Generation.Generate">Generate</sys:String>
+    <!-- World -->
+    <sys:String x:Key="Generation.World">World</sys:String>
+    <sys:String x:Key="Generation.WorldMap">WorldMap</sys:String>
+    <sys:String x:Key="Generation.WorldTime">WorldTime</sys:String>
+    <!-- Robotics -->
+    
+    <sys:String x:Key="Generation.Robotics">Robotics</sys:String>
+    <sys:String x:Key="Generation.NumberRobots">NumberRobots</sys:String>
+    <sys:String x:Key="Generation.CurrentPosition">CurrentPosition</sys:String>
+    <sys:String x:Key="Generation.GoalPosition">GoalPosition</sys:String>
+    <sys:String x:Key="Generation.Proportions">Proportions</sys:String>
+    <sys:String x:Key="Generation.CognitiveAcceleration">CognitiveAcceleration</sys:String>
+    <sys:String x:Key="Generation.MechanicalAcceleration">MechanicalAcceleration</sys:String>
+    <sys:String x:Key="Generation.CognitiveTimer">CognitiveTimer</sys:String>
+    <sys:String x:Key="Generation.MechanicalTimer">MechanicalTimer</sys:String>
+    
+
+
+</ResourceDictionary>

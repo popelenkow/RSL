@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2E5FBF9-DA75-4445-81AE-B71FC10E1C5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RSL</RootNamespace>
+    <AssemblyName>RSAlgorithmLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Maths\Algebra\Constants.cs" />
+    <Compile Include="Maths\Algebra\CosineRule.cs" />
+    <Compile Include="Maths\Algebra\Direction2.cs" />
+    <Compile Include="Maths\Algebra\Direction3.cs" />
+    <Compile Include="Maths\Algebra\Modulus.cs" />
+    <Compile Include="Maths\Algebra\Multiplier.cs" />
+    <Compile Include="Maths\Algebra\Period.cs" />
+    <Compile Include="Maths\Algebra\QuadraticEquation.cs" />
+    <Compile Include="Maths\Algebra\SphericalVector2.cs" />
+    <Compile Include="Maths\Algebra\SphericalVector3.cs" />
+    <Compile Include="Maths\Algebra\Vector2.cs" />
+    <Compile Include="Maths\Algebra\Vector3.cs" />
+    <Compile Include="Maths\FunctionalVector\FunctionalVector2ArithmeticMean.cs" />
+    <Compile Include="Maths\FunctionalVector\FunctionalVector2LinearNorm.cs" />
+    <Compile Include="Maths\FunctionalVector\FunctionalVector2Default.cs" />
+    <Compile Include="Maths\FunctionalVector\IFunctionalVector2.cs" />
+    <Compile Include="Maths\Functional\ICollectionDouble.cs" />
+    <Compile Include="Maths\Functional\IFunctionalDouble.cs" />
+    <Compile Include="Maths\SequencePoints\ISequencePoints2.cs" />
+    <Compile Include="Maths\SequencePoints\Reshuffle\ReshuffleDefault.cs" />
+    <Compile Include="Maths\SequencePoints\Reshuffle\ReshuffleInversion.cs" />
+    <Compile Include="Maths\SequencePoints\Set\SetPoints2Circle.cs" />
+    <Compile Include="Maths\SequencePoints\Set\SetPoints2Default.cs" />
+    <Compile Include="Maths\SequencePoints\Set\SetPoints2Line.cs" />
+    <Compile Include="Maths\SequencePoints\Set\ISetPoints2.cs" />
+    <Compile Include="Maths\SequencePoints\Reshuffle\IReshuffle.cs" />
+    <Compile Include="Maths\SequencePoints\Reshuffle\ReshuffleShift.cs" />
+    <Compile Include="Maths\SequencePoints\SequencePoints2.cs" />
+    <Compile Include="Maths\SequencePoints\Set\SetPoints2TwoLines.cs" />
+    <Compile Include="Maths\Space\ISpace2.cs" />
+    <Compile Include="Maths\Space\Space2Full.cs" />
+    <Compile Include="Maths\Space\Space2Half.cs" />
+    <Compile Include="Maths\Space\Space2Sector.cs" />
+    <Compile Include="Maths\Space\Space2Zero.cs" />
+    <Compile Include="Maths\Space\Space2Сomposition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\CognitiveAcceleration2Default.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\CognitiveAcceleration2PurposeMaximizationFunction.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\CognitiveAcceleration2PurposeSilly.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\CognitiveAcceleration2Manager.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\CognitiveAcceleration2RepulsionConst.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\CognitiveAcceleration2RepulsionSimple.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\ICognitiveAcceleration2.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\ICognitiveAcceleration2Manager.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\MaximizationFunction\IMaximizationFunction2.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFunction2CosineRule.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFunction2Default.cs" />
+    <Compile Include="Robotics\CognitiveAcceleration\MaximizationFunction\MaximizationFunction2Same.cs" />
+    <Compile Include="Robotics\IRobot2.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\GoalPosition2Point.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\IGoalPosition2.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\ILogics2.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\Logics2.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\RangeData.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\RangeFinder.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\RangeVision.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\Vision\INavigationMap2.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\Vision\INavigator2.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\Vision\ITactic2.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\Vision\NavigationMap2.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\Vision\Navigator2Default.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\Vision\Navigator2SimulationUnlimited.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\Vision\Tactic2Default.cs" />
+    <Compile Include="Robotics\LogicalCharacteristics\Vision\Tactic2Static.cs" />
+    <Compile Include="Robotics\MechanicalAcceleration\IMechanicalAcceleration2.cs" />
+    <Compile Include="Robotics\MechanicalAcceleration\IMechanicalAcceleration2Manager.cs" />
+    <Compile Include="Robotics\MechanicalAcceleration\MechanicalAcceleration2CarSimple.cs" />
+    <Compile Include="Robotics\MechanicalAcceleration\MechanicalAcceleration2Default.cs" />
+    <Compile Include="Robotics\MechanicalAcceleration\MechanicalAcceleration2Unlimited.cs" />
+    <Compile Include="Robotics\MechanicalAcceleration\MechanicalAcceleration2Manager.cs" />
+    <Compile Include="Robotics\PhysicalCharacteristics\IPhysics2.cs" />
+    <Compile Include="Robotics\PhysicalCharacteristics\Physics2.cs" />
+    <Compile Include="Robotics\Robot2Simulation.cs" />
+    <Compile Include="World\Time\IWorld2.cs" />
+    <Compile Include="World\Map\IWorldMap2.cs" />
+    <Compile Include="World\Map\WorldMap2.cs" />
+    <Compile Include="World\Time\DataSamplingRateNone.cs" />
+    <Compile Include="World\Time\IDataSamplingRate.cs" />
+    <Compile Include="World\Time\ITimer.cs" />
+    <Compile Include="World\Time\IWorldTime.cs" />
+    <Compile Include="World\Time\TimerSimulation.cs" />
+    <Compile Include="World\Time\WorldTimeSimulation.cs" />
+    <Compile Include="World\Time\WorldTimeSteppable.cs" />
+    <Compile Include="World\World2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Analysis\" />
+    <Folder Include="Maths\Functional\NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

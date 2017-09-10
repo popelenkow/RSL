@@ -1,0 +1,38 @@
+﻿<Application x:Class="RSL.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:ignore="http://www.galasoft.ch/ignore"
+             StartupUri="MainWindow.xaml"
+             mc:Ignorable="d ignore">
+
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Graphics/Localization/en-US/Language.xaml" />
+                <ResourceDictionary Source="/Graphics/Styles/MainStyle.xaml" />
+                <!--<ResourceDictionary Source="/GlobalDictionary.xaml" />-->
+                <!--<ResourceDictionary Source="/Graphics/Styles/GenerationStyle.xaml"/>-->
+
+            </ResourceDictionary.MergedDictionaries>
+
+
+            <Style x:Key="HeaderTextBlockStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="FontFamily" Value="Segoe UI" />
+                <Setter Property="Foreground" Value="#FF00AADE" />
+            </Style>
+
+            <Style x:Key="SubHeaderTextBlockStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontFamily" Value="Segoe UI" />
+                <Setter Property="Foreground" Value="#FF00AADE" />
+            </Style>
+        </ResourceDictionary>
+
+
+    </Application.Resources>
+
+</Application>

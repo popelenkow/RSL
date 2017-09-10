@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:RSL.Graphics.Localization"
+                    
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Generation.xaml"/>
+        <ResourceDictionary Source="Math.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+
+
+
+    <!-- Main window -->
+    <sys:String x:Key="TitleWindow">RSL</sys:String>
+    <sys:String x:Key="TitleMainPage">MainPage</sys:String>
+    <sys:String x:Key="TitleWorkPage">WorkPage</sys:String>
+    <sys:String x:Key="MenuLanguage">Language</sys:String>
+
+    <!-- Work Page -->
+    <sys:String x:Key="Save">Save</sys:String>
+    <sys:String x:Key="Open">Open</sys:String>
+
+
+    <sys:String x:Key="TitleSimulationPage">Simulation</sys:String>
+    <sys:String x:Key="TitleAnalysisPage">Analysis</sys:String>
+
+
+    <!-- ValidationNumberic -->
+    <sys:String x:Key="ExeptionNumberSign">Not number. Incorrect position minus.</sys:String>
+    <sys:String x:Key="ExeptionNumberSignedness">Number only unsigned</sys:String>
+    <sys:String x:Key="ExeptionNumberPoint">Not number. Excess of points.</sys:String>
+    <sys:String x:Key="ExeptionNumberPointness">Number only integer.</sys:String>
+
+</ResourceDictionary>

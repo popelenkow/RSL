@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:RSL.Graphics.Localization.en_US"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- Math -->
+    <sys:String x:Key="Math.Dimension">Dimension</sys:String>
+    <sys:String x:Key="Math.Height">Height</sys:String>
+    <sys:String x:Key="Math.Width">Width</sys:String>
+    <sys:String x:Key="Math.Radius">Radius</sys:String>
+    <sys:String x:Key="Math.Point">Point</sys:String>
+    <sys:String x:Key="Math.Position">Position</sys:String>
+    <sys:String x:Key="Math.Direction">Direction</sys:String>
+    <sys:String x:Key="Math.Number">Number</sys:String>
+    <sys:String x:Key="Math.Proportions">Proportions</sys:String>
+    <sys:String x:Key="Math.Time">Time</sys:String>
+    <sys:String x:Key="Math.Angle">Angle</sys:String>
+    <sys:String x:Key="Math.Speed">Speed</sys:String>
+    <sys:String x:Key="Math.Sampling">Sampling</sys:String>
+    <sys:String x:Key="Math.Reshuffle">Reshuffle</sys:String>
+    <sys:String x:Key="Math.Velocity">Velocity</sys:String>
+    <sys:String x:Key="Math.Course">Course</sys:String>
+    <sys:String x:Key="Math.Acceleration">Acceleration</sys:String>
+    
+</ResourceDictionary>
