@@ -6,6 +6,7 @@ using Avalonia.Logging.Serilog;
 using Avalonia.Themes.Default;
 using Avalonia.Markup.Xaml;
 using Serilog;
+using AvaloniaCoreMVVM2.Views;
 
 namespace AvaloniaCoreMVVM2
 {
@@ -23,7 +24,7 @@ namespace AvaloniaCoreMVVM2
             InitializeLogging();
             AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .Start<MainWindow>();
+                .Start<MainView>();
         }
 
         public static void AttachDevTools(Window window)

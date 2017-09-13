@@ -1,15 +1,13 @@
-﻿using Avalonia;
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace AvaloniaCoreMVVM2
+namespace AvaloniaCoreMVVM2.Views
 {
-    public class MainWindow : Window
+    public class OrderView : UserControl
     {
-        public MainWindow()
+        public OrderView()
         {
             this.InitializeComponent();
-            this.AttachDevTools();
         }
 
         private void InitializeComponent()
