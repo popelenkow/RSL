@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using RSL.UI.MVVM;
 
-namespace AvaloniaCoreMVVM2.ViewModels
+namespace RSL.UI.ViewModels
 {
     class CustomerListViewModel : BindableBase
     {

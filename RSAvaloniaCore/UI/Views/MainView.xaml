@@ -1,0 +1,20 @@
+﻿<Window xmlns="https://github.com/avaloniaui" MinWidth="500" MinHeight="300"
+        xmlns:viewModels="clr-namespace:RSL.UI.ViewModels;assembly=RSAvaloniaCore"
+        xmlns:views="clr-namespace:RSL.UI.Views;assembly=RSAvaloniaCore">
+  <Window.DataContext>
+    <viewModels:MainViewModel/>
+  </Window.DataContext>
+  
+
+  <Window.DataTemplates>
+    <DataTemplate DataType = "viewModels:WorkViewModel">
+      <views:WorkView/>
+    </DataTemplate>
+  </Window.DataTemplates>
+
+  
+    <Grid>
+      <ContentControl Content = "{Binding WorkViewModel}" />
+    </Grid>
+
+</Window>

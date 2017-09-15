@@ -1,0 +1,57 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui">
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height = "Auto" />
+        <RowDefinition Height = "Auto" />
+        <RowDefinition Height = "*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width = "Auto" />
+        <ColumnDefinition Width = "Auto" />
+        <ColumnDefinition Width = "*" />
+      </Grid.ColumnDefinitions>
+      
+      <Grid Name="MediaContent" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width = "*" />
+          <ColumnDefinition Width = "Auto" />
+          <ColumnDefinition Width = "Auto" />
+          <ColumnDefinition Width = "*" />
+        </Grid.ColumnDefinitions>
+      
+        <Button Content="Play" Grid.Column="1" />
+        <Button Content="Pause" Grid.Column="2" />
+      </Grid>
+      <TabControl Name="InspectorContent" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
+        <TabItem Header="Inspector">
+          <TextBox>fdffddfd</TextBox>
+        </TabItem>
+      </TabControl>
+      <TabControl Name="HierarchyContent" Grid.Column="1" Grid.Row="1" Grid.RowSpan="1">
+        <TabItem Header="Hierarchy">
+          <TextBox>fdffddfd</TextBox>
+        </TabItem>
+      </TabControl>
+      <TabControl Name="GeneratorContent" Grid.Column="1" Grid.Row="2" Grid.RowSpan="1">
+        <TabItem Header="Generator">
+          <TextBox>fdffddfd</TextBox>
+        </TabItem>
+      </TabControl>
+      <TabControl Name="SceneContent" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+        <!--
+        <TabControl.Styles>
+          <Style Selector="TabItem">
+            <Setter Property="Button.Background" Value="Blue"/>
+          </Style>
+        </TabControl.Styles>
+        -->
+        <TabItem Header="Scene">
+          <TextBox>fdffddfd</TextBox>
+        </TabItem>
+        <TabItem Header="Graphs">
+            <TextBox>fdffddfd</TextBox>
+          </TabItem>
+        </TabControl>  
+    </Grid>
+</UserControl>
