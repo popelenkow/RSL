@@ -2,11 +2,11 @@
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace RSAvaloniaCore
+namespace RSL.UI.Views
 {
-    public class MainWindow : Window
+    public class MainView : Window
     {
-        public MainWindow()
+        public MainView()
         {
             this.InitializeComponent();
             this.AttachDevTools();

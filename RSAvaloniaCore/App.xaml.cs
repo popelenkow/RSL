@@ -6,8 +6,9 @@ using Avalonia.Logging.Serilog;
 using Avalonia.Themes.Default;
 using Avalonia.Markup.Xaml;
 using Serilog;
+using RSL.UI.Views;
 
-namespace RSAvaloniaCore
+namespace RSL
 {
     class App : Application
     {
@@ -23,7 +24,7 @@ namespace RSAvaloniaCore
             InitializeLogging();
             AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .Start<MainWindow>();
+                .Start<MainView>();
         }
 
         public static void AttachDevTools(Window window)

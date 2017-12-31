@@ -1,11 +1,11 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace AvaloniaCoreMVVM2.Views
+namespace RSL.UI.Views
 {
-    public class CustomerListView : UserControl
+    public class WorkView : UserControl
     {
-        public CustomerListView()
+        public WorkView()
         {
             this.InitializeComponent();
         }

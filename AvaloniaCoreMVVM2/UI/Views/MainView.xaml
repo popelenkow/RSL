@@ -1,6 +1,6 @@
 ﻿<Window xmlns="https://github.com/avaloniaui" MinWidth="500" MinHeight="300"
-        xmlns:viewModels="clr-namespace:AvaloniaCoreMVVM2.ViewModels;assembly=AvaloniaCoreMVVM2"
-        xmlns:views="clr-namespace:AvaloniaCoreMVVM2.Views;assembly=AvaloniaCoreMVVM2">
+        xmlns:viewModels="clr-namespace:RSL.UI.ViewModels;assembly=AvaloniaCoreMVVM2"
+        xmlns:views="clr-namespace:RSL.UI.Views;assembly=AvaloniaCoreMVVM2">
   <Window.DataContext>
     <viewModels:MainViewModel/>
   </Window.DataContext>

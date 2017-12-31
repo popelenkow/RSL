@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace AvaloniaCoreMVVM2
+namespace RSL.UI.MVVM
 {
     class BindableBase : INotifyPropertyChanged
     {

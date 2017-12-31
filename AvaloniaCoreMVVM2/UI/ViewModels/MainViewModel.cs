@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using RSL.UI.MVVM;
 
-namespace AvaloniaCoreMVVM2.ViewModels
+namespace RSL.UI.ViewModels
 {
     class MainViewModel : BindableBase
     {
@@ -12,16 +13,16 @@ namespace AvaloniaCoreMVVM2.ViewModels
             NavCommand = new MyCommand<string>(OnNav);
         }
 
-        private CustomerListViewModel custListViewModel = new CustomerListViewModel();
+        private CustomerListViewModel _custListViewModel = new CustomerListViewModel();
 
-        private OrderViewModel orderViewModelModel = new OrderViewModel();
+        private OrderViewModel _orderViewModelModel = new OrderViewModel();
 
-        private BindableBase _CurrentViewModel;
+        private BindableBase _currentViewModel;
 
         public BindableBase CurrentViewModel
         {
-            get { return _CurrentViewModel; }
-            set { SetProperty(ref _CurrentViewModel, value); }
+            get { return _currentViewModel; }
+            set { SetProperty(ref _currentViewModel, value); }
         }
 
         public MyCommand<string> NavCommand { get; private set; }
@@ -32,11 +33,11 @@ namespace AvaloniaCoreMVVM2.ViewModels
             switch (destination)
             {
                 case "orders":
-                    CurrentViewModel = orderViewModelModel;
+                    CurrentViewModel = _orderViewModelModel;
                     break;
                 case "customers":
                 default:
-                    CurrentViewModel = custListViewModel;
+                    CurrentViewModel = _custListViewModel;
                     break;
             }
         }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using RSL.UI.MVVM;
 
-namespace AvaloniaCoreMVVM2.Models
+namespace RSL.UI.ViewModels
 {
-    class Customer
+    class OrderViewModel : BindableBase
     {
     }
 }

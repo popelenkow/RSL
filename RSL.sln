@@ -12,11 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfGraphs", "WpfGraphs\WpfG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSApplication", "RSApplication\RSApplication.csproj", "{FF6B6545-5A70-4E3F-9E10-6365A012F670}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaCoreMVVM1", "AvaloniaCoreMVVM1\AvaloniaCoreMVVM1.csproj", "{95AD87BB-1F7D-4741-A152-ED655652C3E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaCoreMVVM1", "AvaloniaCoreMVVM1\AvaloniaCoreMVVM1.csproj", "{95AD87BB-1F7D-4741-A152-ED655652C3E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaCoreMVVM2", "AvaloniaCoreMVVM2\AvaloniaCoreMVVM2.csproj", "{CF2801FD-7E9F-4659-B289-40921DBFAA3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaCoreMVVM2", "AvaloniaCoreMVVM2\AvaloniaCoreMVVM2.csproj", "{CF2801FD-7E9F-4659-B289-40921DBFAA3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSAvaloniaCore", "RSAvaloniaCore\RSAvaloniaCore.csproj", "{98A08451-6A43-4FF6-ADF2-D95C48AD9387}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSAvaloniaCore", "RSAvaloniaCore\RSAvaloniaCore.csproj", "{98A08451-6A43-4FF6-ADF2-D95C48AD9387}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
